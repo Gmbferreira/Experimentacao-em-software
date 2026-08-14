@@ -1,0 +1,17 @@
+[project]
+name = "lab-01-experimentacao-me-software"
+version = "0.1.0"
+description = "principais características de sistemas populares open-source"
+requires-python = ">=3.12"
+dependencies = [
+    "streamlit>=1.38",
+    "pandas>=2.2",
+    "requests>=2.32",
+    "python-dotenv>=1.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+[tool.uv]
+package = false
