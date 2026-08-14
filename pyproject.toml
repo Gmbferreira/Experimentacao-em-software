@@ -8,6 +8,8 @@ dependencies = [
     "pandas>=2.2",
     "requests>=2.32",
     "python-dotenv>=1.0",
+    "watchdog>=5.0",
+     "pytest>=8.0",
 ]
 
 [build-system]
@@ -15,3 +17,9 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 [tool.uv]
 package = false
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+markers = [
+    "integration: testes que fazem chamadas reais à API do GitHub",
+]

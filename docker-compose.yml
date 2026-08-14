@@ -8,3 +8,10 @@ services:
       - ./src:/app/src
     env_file:
       - .env
+    develop:
+      watch:
+        - action: sync
+          path: ./src
+          target: /app/src
+        - action: rebuild
+          path: pyproject.toml
